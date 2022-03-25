@@ -1,20 +1,10 @@
 <template>
     <div>
-        <div class="container position-relative bg-white d-flex p-0">
-            <!-- Spinner Start -->
-            <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-            </div> -->
-            <!-- Spinner End -->
-
-
+        <div>
             <!-- Sidebar Start -->
             <div class="sidebar pe-4 pb-3">
                 <nav class="navbar bg-light navbar-light">
                     <a href="/" class="navbar-brand mx-4 mb-3">
-                        <!-- <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>CurePe</h3> -->
                         <h3 class="text-primary"><img src="../../public/assets/img/curepelogo_green.png" width="80px" alt=""></h3>
                     </a>
                     <div class="d-flex align-items-center ms-4 mb-4">
@@ -28,10 +18,9 @@
                         </div>
                     </div>
                     <div class="navbar-nav w-100">
-                        <!-- <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a> -->
                         <router-link to="/dashboard" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
                         <router-link to="/dashboard/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
-                        <a href="/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</a>
+                        <router-link to="/dashboard/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</router-link>
                         <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Transactions</a>
                         <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Health Checkup</a>
                         <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Loan Request</a>
@@ -51,9 +40,6 @@
             <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
-                </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars" style="color: #5aa18e;"></i>
                 </a>
@@ -478,10 +464,5 @@ import "../../public/assets/css/style.css"
 
 export default {
     name: "IndexPage",
-    mounted() {
-      let recaptchaScript = document.createElement('script')
-      recaptchaScript.setAttribute('src', '../../pubic/assets/js/main.js')
-      document.head.appendChild(recaptchaScript)
-    }
 }
 </script>
