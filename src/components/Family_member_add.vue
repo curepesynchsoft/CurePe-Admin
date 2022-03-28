@@ -18,9 +18,12 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
+                    <!-- <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a> -->
                     <router-link to="/dashboard" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
-                    <router-link to="/dashboard/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
-                    <router-link to="/dashboard/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</router-link>
+                    <div class="nav-item dropdown">
+                        <router-link to="/dashboard/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
+                    </div>
+                    <a href="/dashboard/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</a>
                     <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Transactions</a>
                     <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Health Checkup</a>
                     <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Loan Request</a>
@@ -133,7 +136,7 @@
 <script>
 import axios from 'axios';
 export default {
-    name: "memberTable",
+    name: "AddedMemberTable",
     data()
     {
         return {
@@ -149,7 +152,7 @@ export default {
         {
             let token = localStorage.getItem('access_token')
             await axios.get(
-                'https://api-cure-pe.synchsoft.in/api/v1/All_added_member_list', {
+                'https://api-cure-pe.synchsoft.in/api/v1/added_member_list', {
                     headers: {
                         'Authorization': token,
                     }

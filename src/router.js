@@ -3,7 +3,8 @@ import { createWebHistory, createRouter } from 'vue-router';
 import Loginpage from '../src/components/signin';
 import HomePage from '../src/components/userview.vue';
 import TablePage from '../src/components/user_table.vue';
-import MemberTable from '../src/components/added_member.vue'
+import MemberTable from '../src/components/added_member.vue';
+import Addedmember from '../src/components/Family_member_add.vue'
 
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
 		path: '/dashboard/usertable',
 		component: TablePage,
 		name: 'UserTable',
+	},
+	{
+		path: '/dashboard/memberlist',
+		component: Addedmember,
+		name: 'AddedMemberTable',
 	},
 	{
 		path: '/dashboard/membertable',

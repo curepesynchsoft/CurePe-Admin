@@ -18,7 +18,6 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <!-- <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a> -->
                     <router-link to="/dashboard" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
                     <router-link to="/dashboard/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
                     <router-link to="/dashboard/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</router-link>
@@ -91,7 +90,7 @@
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">List of Added Users</h6>
+                            <h6 class="mb-4">List of All Users</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -103,6 +102,7 @@
                                             <th scope="col">DOB</th>
                                             <th scope="col">Health_Id</th>
                                             <th scope="col">OTP</th>
+                                            <th scope="col">Added Relative</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -114,6 +114,7 @@
                                             <td>{{ i.dob }}</td>
                                             <td>{{ i.health_id }}</td>
                                             <td>{{ i.otp }}</td>
+                                            <td><router-link to="/dashboard/memberlist">Added member list</router-link></td>
                                         </tr>
                                     </tbody>
                                 </table>
