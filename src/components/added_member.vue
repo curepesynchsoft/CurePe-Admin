@@ -90,7 +90,10 @@
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">List of Added Members</h6>
+                            <h6 class="mb-4" style="font-size: x-large;
+    font-weight: bolder;
+    background-color: #0dcaf0;
+    text-align: center;">List of Added Members</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -106,7 +109,7 @@
                                     </thead>
                                     <tbody>
                                         <tr v-for='(i, idx) in user' :key="idx">
-                                            <th scope="row">{{idx}}</th>
+                                            <th scope="row">{{++idx}}</th>
                                             <td>{{ i.full_name }}</td>
                                             <td>{{ i.phone }}</td>
                                             <td>{{ i.gender }}</td>

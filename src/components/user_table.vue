@@ -90,7 +90,10 @@
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">List of All Users</h6>
+                            <h6 class="mb-4" style="font-size: x-large;
+    font-weight: bolder;
+    background-color: #0dcaf0;
+    text-align: center;">List of All Users</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -101,19 +104,19 @@
                                             <th scope="col">Gender</th>
                                             <th scope="col">DOB</th>
                                             <th scope="col">Health_Id</th>
-                                            <th scope="col">OTP</th>
+                                            <!-- <th scope="col">OTP</th> -->
                                             <th scope="col">Added Relative</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr v-for='(i, idx) in user' :key="idx">
-                                            <th scope="row">{{idx}}</th>
+                                            <th scope="row">{{++idx}}</th>
                                             <td>{{ i.full_name }}</td>
                                             <td>{{ i.phone }}</td>
                                             <td>{{ i.gender }}</td>
                                             <td>{{ i.dob }}</td>
                                             <td>{{ i.health_id }}</td>
-                                            <td>{{ i.otp }}</td>
+                                            <!-- <td>{{ i.otp }}</td> -->
                                             <td><router-link to="/dashboard/memberlist">Added member list</router-link></td>
                                         </tr>
                                     </tbody>

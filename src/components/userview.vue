@@ -40,7 +40,7 @@
             <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="#" class="sidebar-toggler flex-shrink-0">
+                <a href="#" class="sidebar-toggler flex-shrink-0" onclick="toggleMobileMenu(this)">
                     <i class="fa fa-bars" style="color: #5aa18e;"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
@@ -68,13 +68,13 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <router-link to ="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="../../public/assets/../../public/assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">Ankit Mittal</span>
-                        </a>
+                        </router-link>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
+                            <router-link to ="#" class="dropdown-item">My Profile</router-link>
+                            <router-link to ="#" class="dropdown-item">Settings</router-link>
                             <router-link to="/" class="dropdown-item">Log Out</router-link>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Users</p>
-                                <h6 class="mb-0">$1234</h6>
+                                <h6 class="mb-0">{{ user.length }}</h6>
                             </div>
                         </div>
                     </div>
@@ -370,11 +370,42 @@
 </template>
 
 <script>
+// function toggleMobileMenu(menu) {
+//     menu.classList.toggle('open');
+// }
 import "../../public/assets/css/style.css"
-// import "../../public/assets/lib/owlcarousel/assets/owl.carousel.min.css"
-// import "../../public/assets/js/main.js"
-
+import axios from 'axios';
 export default {
     name: "IndexPage",
+    data()
+    {
+        return {
+            isExits: false,
+            user: [],
+        }
+    },
+    mounted() {
+        this.isOTPVarified()
+    },
+    methods:{
+    async isOTPVarified()
+        {
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/user', {
+                    headers: {
+                        'Authorization': token,
+                    }
+                }                
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                   this.user = res.data.data
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+}
 }
 </script>
