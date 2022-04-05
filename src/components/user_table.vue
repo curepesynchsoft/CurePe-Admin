@@ -2,47 +2,44 @@
     <div>
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
-            <nav class="navbar bg-light navbar-light">
-                <a href="/" class="navbar-brand mx-4 mb-3">
-                    <!-- <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>CurePe</h3> -->
-                    <h3 class="text-primary"><img src="../../public/assets/img/curepelogo_green.png" width="80px" alt=""></h3>
-                </a>
-                <div class="d-flex align-items-center ms-4 mb-4">
-                    <div class="position-relative">
-                        <img class="rounded-circle" src="../../public/assets/../../public/assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                <nav class="navbar bg-light navbar-light">
+                    <a href="/" class="navbar-brand mx-4 mb-3">
+                        <h3 class="text-primary"><img src="../../public/assets/img/curepelogo_green.png" width="80px" alt=""></h3>
+                    </a>
+                    <div class="d-flex align-items-center ms-4 mb-4">
+                        <div class="position-relative">
+                            <img class="rounded-circle" src="../../public/assets/../../public/assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="mb-0">Ankit Mittal</h6>
+                            <span>Admin</span>
+                        </div>
                     </div>
-                    <div class="ms-3">
-                        <h6 class="mb-0">Ankit Mittal</h6>
-                        <span>Admin</span>
+                    <div class="navbar-nav w-100">
+                        <router-link to="/dashboard" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
+                        <router-link to="/dashboard/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
+                        <router-link to="/dashboard/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</router-link>
+                        <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Transactions</a>
+                        <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Health Checkup</a>
+                        <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Loan Request</a>
+                        <div class="nav-item dropdown">
+                            <a href="/dashboard" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Policies</a>
+                        </div>
+                        <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Activities</a>
                     </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <router-link to="/dashboard" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
-                    <router-link to="/dashboard/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
-                    <router-link to="/dashboard/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</router-link>
-                    <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Transactions</a>
-                    <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Health Checkup</a>
-                    <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Loan Request</a>
-                    <div class="nav-item dropdown">
-                        <a href="/dashboard" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Policies</a>
-                    </div>
-                    <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Activities</a>
-                </div>
-            </nav>
+                </nav>
                 
-        </div>
-        <!-- Sidebar End -->
+            </div>
+            
+            <!-- Sidebar End -->
 
 
-        <!-- Content Start -->
-        <div class="content">
+            <!-- Content Start -->
+            <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <router-link to="/dashboard" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
-                </router-link>
-                <a href="#" class="sidebar-toggler flex-shrink-0">
+                <a href="#" class="sidebar-toggler flex-shrink-0" onclick="toggleMobileMenu(this)">
                     <i class="fa fa-bars" style="color: #5aa18e;"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
@@ -70,18 +67,19 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <router-link to ="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="../../public/assets/../../public/assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">Ankit Mittal</span>
-                        </a>
+                        </router-link>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="signin.html" class="dropdown-item">Log Out</a>
+                            <router-link to ="#" class="dropdown-item">My Profile</router-link>
+                            <router-link to ="#" class="dropdown-item">Settings</router-link>
+                            <router-link to="/" class="dropdown-item">Log Out</router-link>
                         </div>
                     </div>
                 </div>
             </nav>
+          <!--nav bar end-->
             <!-- Navbar End-->
 
 
@@ -98,12 +96,14 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
+                                            <th scope="col">ID</th>
                                             <th scope="col">Full Name</th>
                                             <th scope="col">Phone</th>
                                             <th scope="col">Gender</th>
                                             <th scope="col">DOB</th>
                                             <th scope="col">Health_Id</th>
+                                            <th scope="col">Created At</th>
+                                            <th scope="col">Updated At</th>
                                             <!-- <th scope="col">OTP</th> -->
                                             <th scope="col">Added Relative</th>
                                         </tr>
@@ -116,7 +116,9 @@
                                             <td>{{ i.gender }}</td>
                                             <td>{{ i.dob }}</td>
                                             <td>{{ i.health_id }}</td>
-                                            <!-- <td>{{ i.otp }}</td> -->
+                                            <td>{{ i.created_at }}</td>
+                                            <td>{{ i.updated_at }}</td>
+                                            <!-- <td>{{ idx.length }}</td> -->
                                             <td><router-link to="/dashboard/memberlist">Added member list</router-link></td>
                                         </tr>
                                     </tbody>
@@ -155,6 +157,36 @@ export default {
             let token = localStorage.getItem('access_token')
             await axios.get(
                 'https://api-cure-pe.synchsoft.in/api/v1/user', {
+                    headers: {
+                        'Authorization': token,
+                    }
+                }                
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                   this.user = res.data.data
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+},
+data_relatives()
+    {
+        return {
+            isExits: false,
+            user_relative: [],
+        }
+    },
+    // mountedd() {
+    //     this.isOTPVarified()
+    // },
+    method:{
+    async isOTPVarified()
+        {
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/added_member_list', {
                     headers: {
                         'Authorization': token,
                     }

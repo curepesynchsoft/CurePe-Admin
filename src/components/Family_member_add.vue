@@ -105,6 +105,8 @@
                                             <th scope="col">DOB</th>
                                             <th scope="col">Relation</th>
                                             <th scope="col">UserId</th>
+                                            <th scope="col">Created At</th>
+                                            <th scope="col">Updated At</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -115,6 +117,8 @@
                                             <td>{{ i.gender }}</td>
                                             <td>{{ i.dob }}</td>
                                             <td>{{ i.relation }}</td>
+                                            <td>{{ i.created_at }}</td>
+                                            <td>{{ i.updated_at }}</td>
                                             <td>{{ i.userId }}</td>
                                         </tr>
                                     </tbody>

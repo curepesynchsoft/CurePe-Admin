@@ -42,6 +42,7 @@ export default {
     name: "LoginPage",
     data()
     {
+        
         return {
             isExits: false,
             number: {

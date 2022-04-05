@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
-// import UserTable from '@/components/table.vue';
+// import Sidebar from '../src/components/common/sidebar'
 import Loginpage from '../src/components/signin';
 import HomePage from '../src/components/userview.vue';
 import TablePage from '../src/components/user_table.vue';

@@ -30,7 +30,6 @@
                         <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Activities</a>
                     </div>
                 </nav>
-                
             </div>
             
             <!-- Sidebar End -->
@@ -40,7 +39,7 @@
             <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="#" class="sidebar-toggler flex-shrink-0" onclick="toggleMobileMenu(this)">
+                <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars" style="color: #5aa18e;"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
@@ -75,7 +74,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <router-link to ="#" class="dropdown-item">My Profile</router-link>
                             <router-link to ="#" class="dropdown-item">Settings</router-link>
-                            <router-link to="/" class="dropdown-item">Log Out</router-link>
+                            <router-link to="../src/components/signin.vue" class="dropdown-item">Log Out</router-link>
                         </div>
                     </div>
                 </div>
@@ -86,20 +85,22 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
+                        <router-link to="/dashboard/usertable">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Users</p>
-                                <h6 class="mb-0">{{ user.length }}</h6>
+                                <h6 class="mb-0" >{{ Object.keys(user).length }}</h6>
                             </div>
                         </div>
+                        </router-link>
                     </div>
                     <div class="col-sm-6 col-xl-3">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Members</p>
-                                <h6 class="mb-0">$1234</h6>
+                                <h6 class="mb-0">{{ Object.keys(user).length }}</h6>
                             </div>
                         </div>
                     </div>
@@ -383,6 +384,9 @@ export default {
             isExits: false,
             user: [],
         }
+        // {
+        //     variable: false
+        // }
     },
     mounted() {
         this.isOTPVarified()
@@ -406,6 +410,36 @@ export default {
                 console.log(error)
             })
         }
-}
+},
+data_relatives()
+    {
+        return {
+            isExits: false,
+            user_relative: [],
+        }
+        // {
+        //     variable: false
+        // }
+    },
+    method:{
+    async isOTPVarified()
+        {
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/added_member_list', {
+                    headers: {
+                        'Authorization': token,
+                    }
+                }                
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                   this.user_relative = res.data.data
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+    },
 }
 </script>

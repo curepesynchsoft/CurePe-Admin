@@ -1,5 +1,4 @@
-// require('expose?$!expose?jQuery!jquery')
-window.function ($) {
+$(function () {
     "use strict";
 
     // Spinner
@@ -35,11 +34,11 @@ window.function ($) {
 
 
     // Progress Bar
-    window.$('.pg-bar').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
-    }, {offset: '80%'});
+    // window.$('.pg-bar').waypoint(function () {
+    //     $('.progress .progress-bar').each(function () {
+    //         $(this).css("width", $(this).attr("aria-valuenow") + '%');
+    //     });
+    // }, {offset: '80%'});
 
 
     // Calender
@@ -49,7 +48,7 @@ window.function ($) {
     // });
 
 
-    // // Testimonials carousel
+    // Testimonials carousel
     // $(".testimonial-carousel").owlCarousel({
     //     autoplay: true,
     //     smartSpeed: 1000,
@@ -202,7 +201,10 @@ window.function ($) {
     //         responsive: true
     //     }
     // });
+    function Highlight(button) {
+        $(".Highlight").removeClass("Highlight");
+        $(button).addClass("Highlight");
+     }
 
-    
-(jQuery);
+})
 

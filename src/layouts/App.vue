@@ -1,10 +1,6 @@
-
-
 <template>
-<router-view></router-view>
   <div id="app">
     <vue-extend-layouts />
-    <!-- <router-view></router-view> -->
   </div>
 </template>
 
@@ -15,4 +11,3 @@ export default {
   components: { VueExtendLayouts }
 }
 </script>
-
