@@ -1,10 +1,10 @@
 <template>
-
+ <div>
     <!-- Sidebar Start -->
+    
     <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-light navbar-light">
             <a href="/" class="navbar-brand mx-4 mb-3">
-                <!-- <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>CurePe</h3> -->
                 <h3 class="text-primary"><img src="../../../public/assets/img/curepelogo_green.png" width="80px" alt=""></h3>
             </a>
             <div class="d-flex align-items-center ms-4 mb-4">
@@ -31,49 +31,13 @@
                 <a href="/dashboard" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Activities</a>
             </div>
         </nav>
+        
     </div>
-    <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-        <a href="#" class="sidebar-toggler flex-shrink-0">
-            <i class="fa fa-bars" style="color: #5aa18e;"></i>
-        </a>
-        <form class="d-none d-md-flex ms-4">
-            <input class="form-control border-0" type="search" placeholder="Search">
-        </form>
-            <div class="navbar-nav align-items-center ms-auto">
-                <div class="nav-item dropdown">
-                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                        <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0">Profile updated</h6>
-                            <small>15 minutes ago</small>
-                        </a>
-                        <hr class="dropdown-divider">
-                        <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0">New user added</h6>
-                            <small>15 minutes ago</small>
-                        </a>
-                        <hr class="dropdown-divider">
-                        <a href="#" class="dropdown-item">
-                            <h6 class="fw-normal mb-0">Password changed</h6>
-                            <small>15 minutes ago</small>
-                        </a>
-                        <hr class="dropdown-divider">
-                        <a href="#" class="dropdown-item text-center">See all notifications</a>
-                    </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <router-link to ="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        <img class="rounded-circle me-lg-2" src="../../../public/assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <span class="d-none d-lg-inline-flex">Ankit Mittal</span>
-                    </router-link>
-                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                        <router-link to ="#" class="dropdown-item">My Profile</router-link>
-                        <router-link to ="#" class="dropdown-item">Settings</router-link>
-                        <router-link to="signin.vue" class="dropdown-item">Log Out</router-link>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- Sidebar End -->
+    
+    
+ </div> 
+ 
+  <!-- Sidebar End -->
 </template>
 <script>
 export default {

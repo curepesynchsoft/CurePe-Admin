@@ -1,18 +1,25 @@
 
 
 <template>
-<router-view></router-view>
   <div id="app">
-    <vue-extend-layouts />
+    <Sidebar />
+    <div class="content">
+      <TopMenu />
+      <router-view></router-view>
+    </div>
+    <!-- <vue-extend-layouts /> -->
     <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
-import VueExtendLayouts from 'vue-extend-layout'
+// import VueExtendLayouts from 'vue-extend-layout'
+// import Sidebar from '../components/common/sidebar.vue'
+import Sidebar from '../src/components/common/sidebar.vue'
+import TopMenu from '../src/components/common/top_menu.vue'
 export default {
   name: 'App',
-  components: { VueExtendLayouts }
+  components: { Sidebar, TopMenu },
 }
 </script>
 
