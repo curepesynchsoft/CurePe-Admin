@@ -2,9 +2,10 @@
 
 <template>
   <div id="app">
-    <Sidebar />
+    <Sidebar v-if="$route.path!='/' "/>
+    <!-- <Sidebar /> -->
     <div class="content">
-      <TopMenu />
+      <TopMenu v-if="$route.path!='/' "/>
       <router-view></router-view>
     </div>
     <!-- <vue-extend-layouts /> -->
@@ -14,7 +15,6 @@
 
 <script>
 // import VueExtendLayouts from 'vue-extend-layout'
-// import Sidebar from '../components/common/sidebar.vue'
 import Sidebar from '../src/components/common/sidebar.vue'
 import TopMenu from '../src/components/common/top_menu.vue'
 export default {

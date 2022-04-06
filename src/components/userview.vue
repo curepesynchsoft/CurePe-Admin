@@ -269,7 +269,7 @@
         </div>
 
             <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+            <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
     </div>
 </template>
 
@@ -312,25 +312,25 @@ export default {
                 console.log(error)
             })
         },
-        async isOTPVarify()
-            {
-                let token = localStorage.getItem('access_token')
-                await axios.get(
-                    'https://api-cure-pe.synchsoft.in/api/v1/added_all_member_list', {
-                        headers: {
-                            'Authorization': token,
-                        }
-                    }                
-                ).then(res => {
-                    // localStorage.setItem('access_token', token)
-                    if(res){
-                        this.user_relative = res.data.data
-                        console.log(res.data.data)
+    async isOTPVarify()
+        {
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/added_all_member_list', {
+                    headers: {
+                        'Authorization': token,
                     }
-                }).catch(error => {
-                    console.log(error)
-                })
-            }
+                }                
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                    this.user_relative = res.data.data
+                    console.log(res.data.data)
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+        }
     }
 }
 </script>

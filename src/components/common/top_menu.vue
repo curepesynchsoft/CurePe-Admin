@@ -32,8 +32,8 @@
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="../../../public/assets/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Ankit Mittal</span>
+                            <img class="rounded-circle me-lg-2" src="../../../public/assets/img/curepelogo_green.png" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">{{ admin.full_name }}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
@@ -46,7 +46,42 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-    name: "Top_menu"
+    name: "Top_menu",
+    data()
+    {
+        return {
+            isExits: false,
+            admin: [],
+        }
+        // {
+        //     variable: false
+        // }
+    },
+    mounted() {
+        this.isOTPVarified()
+    },
+    methods:{
+    async isOTPVarified()
+        {
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/admin', {
+                    headers: {
+                        'Authorization': token,
+                    }
+                }                
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                   this.admin = res.data.data[0]
+                   console.log(this.admin)
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+        },
+}
 }
 </script>

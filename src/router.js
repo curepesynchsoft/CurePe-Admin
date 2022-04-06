@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Sidebar from '../src/components/common/sidebar.vue'
+// import Sidebar from '../src/components/common/sidebar.vue'
 import Loginpage from '../src/components/signin';
 import HomePage from '../src/components/userview.vue';
 import TablePage from '../src/components/user_table.vue';
@@ -11,15 +11,14 @@ const routes = [
 	{
 		path: '/',
 		component: Loginpage,
+		meta:{sidebar:false}
 	},
-	{
-		path: '/sidebar',
-		component: Sidebar,
-	},
+	
 	{
 		path: '/dashboard',
 		component: HomePage,
 		name: 'Home',
+		meta:{sidebar:true}
 	},
 	{
 		path: '/dashboard/usertable',
