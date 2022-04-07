@@ -15,22 +15,22 @@ const routes = [
 	},
 	
 	{
-		path: '/dashboard',
+		path: '/home',
 		component: HomePage,
 		name: 'Home',
 	},
 	{
-		path: '/dashboard/usertable',
+		path: '/home/usertable',
 		component: TablePage,
 		name: 'UserTable',
 	},
 	{
-		path: '/dashboard/memberlist',
+		path: '/home/memberlist',
 		component: Addedmember,
 		name: 'AddedMemberTable',
 	},
 	{
-		path: '/dashboard/membertable',
+		path: '/home/membertable',
 		component: MemberTable,
 		name: 'MemberTable',
 	},
