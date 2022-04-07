@@ -84,7 +84,7 @@ export default {
                 if(res.data.status === true){
                     // this.isExits = true
                    
-                    this.$router.push('/dashboard');
+                   window.location = '/home';
                 }
             }).catch(error => {
                 console.log(error)

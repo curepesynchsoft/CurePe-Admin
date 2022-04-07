@@ -2,10 +2,15 @@
 
 <template>
   <div id="app">
-    <Sidebar />
-    <!-- <Sidebar /> -->
-    <div class="content">
-      <TopMenu />
+    <div v-if="$route.path!='/'">
+      <Sidebar />
+      <!-- <Sidebar /> -->
+      <div class="content">
+        <TopMenu />
+        <router-view></router-view>
+      </div>
+    </div>
+    <div v-else>
       <router-view></router-view>
     </div>
     <!-- <vue-extend-layouts /> -->
