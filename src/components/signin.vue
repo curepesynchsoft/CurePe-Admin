@@ -84,7 +84,7 @@ export default {
                 if(res.data.status === true){
                     // this.isExits = true
                    
-                   window.location = '/home';
+                   window.location = 'home';
                 }
             }).catch(error => {
                 console.log(error)
