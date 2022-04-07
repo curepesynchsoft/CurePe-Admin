@@ -83,13 +83,13 @@ export default {
                 // localStorage.getItem('access_token')
                 if(res.data.status === true){
                     // this.isExits = true
-                    // window.location.replace("/home");
-                    window.location.href = "/home";
+                   
+                    this.$router.push('/dashboard');
                 }
             }).catch(error => {
                 console.log(error)
                 alert("Wrong OTP!")
-            }) 
+            })
         }
         
     }

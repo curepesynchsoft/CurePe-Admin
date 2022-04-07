@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="navbar-nav w-100">
-                <router-link to="/home" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>home</router-link>
+                <router-link to="/home" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
                 <router-link to="/home/usertable" class="nav-link dropdown-toggle"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
                 <router-link to="/home/membertable" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Added Members</router-link>
                 <router-link to="/home" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Transactions</router-link>
