@@ -83,13 +83,12 @@ export default {
                 // localStorage.getItem('access_token')
                 if(res.data.status === true){
                     // this.isExits = true
-                   
-                    this.$router.push('/dashboard');
+                    window.location.replace("/dashboard");
                 }
             }).catch(error => {
                 console.log(error)
                 alert("Wrong OTP!")
-            })
+            }) 
         }
         
     }

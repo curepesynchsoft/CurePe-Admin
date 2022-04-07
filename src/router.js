@@ -11,14 +11,13 @@ const routes = [
 	{
 		path: '/',
 		component: Loginpage,
-		meta:{sidebar:false}
+		name: 'LoginPage'
 	},
 	
 	{
 		path: '/dashboard',
 		component: HomePage,
 		name: 'Home',
-		meta:{sidebar:true}
 	},
 	{
 		path: '/dashboard/usertable',
