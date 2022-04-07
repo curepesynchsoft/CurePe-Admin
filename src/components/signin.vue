@@ -83,7 +83,8 @@ export default {
                 // localStorage.getItem('access_token')
                 if(res.data.status === true){
                     // this.isExits = true
-                    window.location.replace("/dashboard");
+                    // window.location.replace("/home");
+                    window.location.href = "/home";
                 }
             }).catch(error => {
                 console.log(error)

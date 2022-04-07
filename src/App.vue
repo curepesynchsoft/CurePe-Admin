@@ -1,12 +1,12 @@
 
 
 <template>
-  <div id="app"> 
-    <Sidebar v-if="$route.path!='/' "/>
-    <!-- <Sidebar v-if="!['LoginPage'].includes()"/> -->
+  <div id="app">
+    <Sidebar v-if="$route.path!='/'"/>
+    <!-- <Sidebar /> -->
     <div class="content" v-if="$route.path!='/'">
       <TopMenu />
-      <router-view></router-view>
+      <router-view ></router-view>
     </div>
     <router-view v-else></router-view>
     <!-- <vue-extend-layouts /> -->
@@ -21,7 +21,6 @@ import TopMenu from '../src/components/common/top_menu.vue'
 export default {
   name: 'App',
   components: { Sidebar, TopMenu },
-  
 }
 </script>
 
