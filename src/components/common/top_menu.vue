@@ -55,9 +55,6 @@ export default {
             isExits: false,
             admin: [],
         }
-        // {
-        //     variable: false
-        // }
     },
     mounted() {
         this.isOTPVarified()
