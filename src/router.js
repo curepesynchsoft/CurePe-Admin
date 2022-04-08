@@ -19,17 +19,17 @@ const routes = [
 		name: 'Home',
 	},
 	{
-		path: '/home/usertable',
+		path: '/usertable',
 		component: TablePage,
 		name: 'UserTable',
 	},
 	{
-		path: '/home/memberlist',
+		path: '/memberlist',
 		component: Addedmember,
 		name: 'AddedMemberTable',
 	},
 	{
-		path: '/home/membertable',
+		path: '/membertable',
 		component: MemberTable,
 		name: 'MemberTable',
 	},
@@ -40,5 +40,5 @@ const router = createRouter({
 	history: createWebHistory(),
 	routes,
 });
-
+router.replace("myPath");
 export default router;
