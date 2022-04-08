@@ -86,7 +86,7 @@ export default {
                    
                     // this.$router.push(home);
                     // this.$router.push('home')
-                     window.location.href = 'home';
+                     $window.location.href = 'home';
                 }
             }).catch(error => {
                 console.log(error)
