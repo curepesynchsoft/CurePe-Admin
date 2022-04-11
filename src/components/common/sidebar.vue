@@ -29,7 +29,6 @@
                 <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-chart-bar me-2"></i>Activities</router-link>
             </div>
         </nav>
-        
     </div>
     
     

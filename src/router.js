@@ -40,5 +40,4 @@ const router = createRouter({
 	history: createWebHistory(),
 	routes,
 });
-router.replace("myPath");
 export default router;
