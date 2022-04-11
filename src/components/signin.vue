@@ -80,7 +80,7 @@ export default {
             ).then(res => {
                 let token = 'Bearer '+ res.data.data.access_token;
                 localStorage.setItem('access_token', token)
-                // localStorage.getItem('access_token')
+                localStorage.getItem('access_token')
                 if(res.data.status === true){
                     // this.$router.push('/home');
                     window.location.href = 'home';
