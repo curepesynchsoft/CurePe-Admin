@@ -25,7 +25,7 @@
                                 <input type="password" class="form-control" id="floatingPassword" v-model="number.otp" placeholder="OTP">
                                 <label for="floatingPassword">OTP</label>
                             </div>
-                            <button class="btn btn-primary py-3 w-100 mb-4">{{ isExits ? 'Verify' : 'Send OTP' }}</button>
+                            <button class="btn btn-primary py-3 w-100 mb-4" @click="this.window.location='/home'">{{ isExits ? 'Verify' : 'Send OTP' }}</button>
                         </form>
                         </div>
                     </div>
