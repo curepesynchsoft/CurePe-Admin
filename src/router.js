@@ -11,27 +11,32 @@ const routes = [
 	{
 		path: '/',
 		component: Loginpage,
+		meta:{requiresVisitor: true},
 	},
 	
 	{
 		path: '/home',
 		component: HomePage,
 		name: 'Home',
+		meta:{requiresVisitor: false},
 	},
 	{
 		path: '/usertable',
 		component: TablePage,
 		name: 'UserTable',
+		meta:{requiresVisitor: false},
 	},
 	{
 		path: '/memberlist',
 		component: Addedmember,
 		name: 'AddedMemberTable',
+		meta:{requiresVisitor: false},
 	},
 	{
 		path: '/membertable',
 		component: MemberTable,
 		name: 'MemberTable',
+		meta:{requiresVisitor: false},
 	},
 ];
 
