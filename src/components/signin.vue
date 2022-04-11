@@ -82,8 +82,8 @@ export default {
                 localStorage.setItem('access_token', token)
                 // localStorage.getItem('access_token')
                 if(res.data.status === true){
-                    // this.$router.push('home');
-                    window.location.href = 'home';
+                    this.$router.push('home');
+                    // window.location.href = 'home';
                     
                 }
             }).catch(error => {
