@@ -9,7 +9,7 @@ import Addedmember from '../src/components/Family_member_add.vue'
 
 const routes = [
 	{
-		path: '/',
+		path: '',
 		component: Loginpage,
 		meta:{requiresVisitor: true},
 	},
