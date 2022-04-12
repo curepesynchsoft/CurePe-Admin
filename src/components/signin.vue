@@ -37,6 +37,7 @@
 </template>
 
 <script>
+
 import axios from 'axios';
 export default {
     name: "LoginPage",
@@ -81,9 +82,9 @@ export default {
                 let token = 'Bearer '+ res.data.data.access_token;
                 localStorage.setItem('access_token', token)
                 // localStorage.getItem('access_token')
-                if(token){
+                if(res.data.status === true){
                     this.$router.push('/home');
-                    window.location.href = '/home';
+                    // window.location.href = '/home';
                     
                 }
             }).catch(error => {

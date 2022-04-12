@@ -7,6 +7,7 @@ import MemberTable from '../src/components/added_member.vue';
 import Addedmember from '../src/components/Family_member_add.vue'
 
 
+
 const routes = [
 	{
 		path: '/',
