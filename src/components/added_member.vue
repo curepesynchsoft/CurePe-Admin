@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <td><a class="btn btn-sm btn-primary" href="/home">Back to Home</a></td>
+                <td><a class="btn btn-sm btn-primary" to="/home">Back to Home</a></td>
             </div>
         </div>
     </div>

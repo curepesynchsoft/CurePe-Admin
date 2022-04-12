@@ -26,7 +26,7 @@ const routes = [
 		name: 'UserTable',
 	},
 	{
-		path: '/memberlist/:id',
+		path: '/memberlist',
 		component: Addedmember,
 		name: 'AddedMemberTable',
 	},

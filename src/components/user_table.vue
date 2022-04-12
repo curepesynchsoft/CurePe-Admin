@@ -35,7 +35,7 @@ text-align: center;">List of All Users</h6>
                                         <td>{{ i.created_at }}</td>
                                         <td>{{ i.updated_at }}</td>
                                         <!-- <td>{{ idx.length }}</td> -->
-                                        <td><router-link to="/memberlist/:id">Added member list</router-link></td>
+                                        <td><router-link to="/memberlist">Added member list</router-link></td>
                                     </tr>
                                 </tbody>
                                 
@@ -43,7 +43,7 @@ text-align: center;">List of All Users</h6>
                         </div>
                     </div>
                 </div>
-                <td><a class="btn btn-sm btn-primary" href="/home">Back to Home</a></td>
+                <td><router-link class="btn btn-sm btn-primary" to="/home">Back to Home</router-link></td>
                     <!-- <button type="submit" class="bg-secondary mb-3" style="align: center"><a href="/home">Back</a></button> -->
             </div>
         </div>
