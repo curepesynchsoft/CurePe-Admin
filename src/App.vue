@@ -11,18 +11,18 @@
     <div v-else>
       <router-view></router-view>
     </div>
-    <!-- <vue-extend-layouts /> -->
+    <vue-extend-layouts />
     <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
-// import VueExtendLayouts from 'vue-extend-layout'
+import VueExtendLayouts from 'vue-extend-layout'
 import Sidebar from '../src/components/common/sidebar.vue'
 import TopMenu from '../src/components/common/top_menu.vue'
 export default {
   name: 'App',
-  components: { Sidebar, TopMenu },
+  components: { VueExtendLayouts, Sidebar, TopMenu },
   
 }
 </script>
