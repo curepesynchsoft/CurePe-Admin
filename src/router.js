@@ -11,6 +11,7 @@ const routes = [
 	{
 		path: '/',
 		component: Loginpage,
+		// redirect: '/home',
 	},
 	
 	{
@@ -24,7 +25,7 @@ const routes = [
 		name: 'UserTable',
 	},
 	{
-		path: '/memberlist',
+		path: '/memberlist/:id',
 		component: Addedmember,
 		name: 'AddedMemberTable',
 	},
@@ -38,6 +39,8 @@ const routes = [
 const router = createRouter({
 	mode: "history",
 	history: createWebHistory(),
-	routes,
+	routes: routes,
+	linkExactActiveClass: 'active',
 });
+
 export default router;

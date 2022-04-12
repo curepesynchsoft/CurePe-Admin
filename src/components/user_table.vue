@@ -35,7 +35,7 @@ text-align: center;">List of All Users</h6>
                                         <td>{{ i.created_at }}</td>
                                         <td>{{ i.updated_at }}</td>
                                         <!-- <td>{{ idx.length }}</td> -->
-                                        <td><router-link to="/home/memberlist">Added member list</router-link></td>
+                                        <td><router-link to="/memberlist/:id">Added member list</router-link></td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -20,7 +20,7 @@
             </div>
             <div class="navbar-nav w-100">
                 <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/home' ? 'active' : ''"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</router-link>
-                <router-link to="usertable" class="nav-link" :class="$route.path === '/usertable' ? 'active' : ''"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
+                <router-link to="/usertable" class="nav-link" :class="$route.path === '/usertable' ? 'active' : ''"><i class="fa fa-laptop me-2"></i>List of Users</router-link>
                 <router-link to="membertable" class="nav-item nav-link" :class="$route.path === '/membertable' ? 'active' : ''"><i class="fa fa-th me-2"></i>Added Members</router-link>
                 <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-keyboard me-2"></i>Transactions</router-link>
                 <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-table me-2"></i>Health Checkup</router-link>

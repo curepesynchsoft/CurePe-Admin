@@ -8,7 +8,9 @@
       <TopMenu />
       <router-view></router-view>
     </div>
-    <router-view v-else></router-view>
+    <div v-else>
+      <router-view></router-view>
+    </div>
     <!-- <vue-extend-layouts /> -->
     <!-- <router-view></router-view> -->
   </div>
