@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <td><a class="btn btn-sm btn-primary" to="/home">Back to Home</a></td>
+                <td><router-link class="btn btn-sm btn-primary" to="/home">Back to Home</router-link></td>
             </div>
         </div>
     </div>
