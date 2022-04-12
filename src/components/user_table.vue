@@ -38,10 +38,13 @@ text-align: center;">List of All Users</h6>
                                         <td><router-link to="/memberlist/:id">Added member list</router-link></td>
                                     </tr>
                                 </tbody>
+                                
                             </table>
                         </div>
                     </div>
                 </div>
+                <td><a class="btn btn-sm btn-primary" href="/home">Back to Home</a></td>
+                    <!-- <button type="submit" class="bg-secondary mb-3" style="align: center"><a href="/home">Back</a></button> -->
             </div>
         </div>
     </div>

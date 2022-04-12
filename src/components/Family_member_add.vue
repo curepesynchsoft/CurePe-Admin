@@ -37,6 +37,7 @@
                         </div>
                     </div>
                 </div>
+                <td><a class="btn btn-sm btn-primary" href="/usertable">Users List</a></td>
             </div>
         </div>
     </div>
