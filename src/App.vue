@@ -9,6 +9,7 @@
       <router-view></router-view>
     </div>
     <div v-else>
+      <vue-extend-layouts />
       <router-view></router-view>
     </div>
     <vue-extend-layouts />
