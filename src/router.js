@@ -37,10 +37,9 @@ const routes = [
 ];
 
 const router = createRouter({
-	mode: "history",
+	// mode: "history",
 	history: createWebHistory(),
 	routes: routes,
-	linkExactActiveClass: 'active',
 });
 
 export default router;
