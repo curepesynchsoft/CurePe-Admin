@@ -19,6 +19,7 @@ const routes = [
 		path: '/home',
 		component: HomePage,
 		name: 'Home',
+		// redirect: '/home',
 	},
 	{
 		path: '/usertable',
@@ -38,8 +39,8 @@ const routes = [
 ];
 
 const router = createRouter({
-	// mode: "history",
-	history: createWebHistory(),
+	mode: "history",
+	history: createWebHistory(false),
 	routes: routes,
 });
 
