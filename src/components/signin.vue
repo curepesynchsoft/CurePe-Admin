@@ -84,7 +84,7 @@ export default {
                 // localStorage.getItem('access_token')
                 if(res.data.status === true){
                     // this.$router.push('/home');
-                    window.location = '/home';
+                    window.location = 'home';
                     
                 }
             }).catch(error => {
