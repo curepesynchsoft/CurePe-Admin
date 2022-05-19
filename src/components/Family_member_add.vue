@@ -71,6 +71,7 @@ export default {
                 // localStorage.setItem('access_token', token)
                 if(res){
                    this.user = res.data.data
+                   console.log(res.data.data);
                    
                 }
             }).catch(error => {
