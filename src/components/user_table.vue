@@ -21,7 +21,7 @@ text-align: center;">List of All Users</h6>
                                         <th scope="col">Created At</th>
                                         <th scope="col">Updated At</th>
                                         <!-- <th scope="col">OTP</th> -->
-                                        <th scope="col">Added Relative</th>
+                                        <!-- <th scope="col">Added Relative</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -35,7 +35,7 @@ text-align: center;">List of All Users</h6>
                                         <td>{{ i.created_at }}</td>
                                         <td>{{ i.updated_at }}</td>
                                         <!-- <td>{{ idx.length }}</td> -->
-                                        <td><router-link to="/memberlist">Added member list</router-link></td>
+                                        <!-- <td><router-link to="/memberlist">Added member list</router-link></td> -->
                                     </tr>
                                 </tbody>
                                 
