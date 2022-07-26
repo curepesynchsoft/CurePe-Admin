@@ -18,10 +18,11 @@ text-align: center;">List of All Users</h6>
                                         <th scope="col">Gender</th>
                                         <th scope="col">DOB</th>
                                         <th scope="col">Health_Id</th>
-                                        <th scope="col">Created At</th>
-                                        <th scope="col">Updated At</th>
+                                        <th scope="col">Checkup</th>
+                                        <th scope="col">Report</th>
+                                        <th scope="col">Insurance</th>
                                         <!-- <th scope="col">OTP</th> -->
-                                        <!-- <th scope="col">Added Relative</th> -->
+                                        <th scope="col">Added Relative</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -33,9 +34,9 @@ text-align: center;">List of All Users</h6>
                                         <td>{{ i.dob }}</td>
                                         <td>{{ i.health_id }}</td>
                                         <td>{{ i.created_at }}</td>
-                                        <td>{{ i.updated_at }}</td>
-                                        <!-- <td>{{ idx.length }}</td> -->
-                                        <!-- <td><router-link to="/memberlist">Added member list</router-link></td> -->
+                                        <td><i class="bi bi-download" style='color: #009CFF;'></i></td>
+                                        <td>status</td>
+                                        <td><router-link to="/memberlist">Added member list</router-link></td>
                                     </tr>
                                 </tbody>
                                 

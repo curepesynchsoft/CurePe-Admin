@@ -15,8 +15,9 @@
                                         <th scope="col">Gender</th>
                                         <th scope="col">DOB</th>
                                         <th scope="col">Relation</th>
-                                        <th scope="col">Created At</th>
-                                        <th scope="col">Updated At</th>
+                                        <th scope="col">Checkup</th>
+                                        <th scope="col">Report</th>
+                                        <th scope="col">Insurance</th>
                                         <th scope="col">UserId</th>
                                     </tr>
                                 </thead>
@@ -28,8 +29,9 @@
                                         <td>{{ i.gender }}</td>
                                         <td>{{ i.dob }}</td>
                                         <td>{{ i.relation }}</td>
-                                        <td>{{ i.created_at }}</td>
+                                        <td><i class="bi bi-download" style='color: #009CFF'></i></td>
                                         <td>{{ i.updated_at }}</td>
+                                        <td>status</td>
                                         <td>{{ i.userId }}</td>
                                     </tr>
                                 </tbody>
