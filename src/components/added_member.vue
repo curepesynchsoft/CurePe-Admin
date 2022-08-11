@@ -4,7 +4,9 @@
             <div class="row g-4">
                 <div class="col-12">
                     <div class="bg-light rounded h-100 p-4">
-                        <h6 class="mb-4" style="font-size: x-large; font-weight: bolder; background-color: #0dcaf0; text-align: center;">List of Added Members</h6>
+                        <h6 class="mb-4"
+                            style="font-size: x-large; font-weight: bolder; background-color: #0dcaf0; text-align: center;">
+                            List of Added Members</h6>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -19,6 +21,7 @@
                                         <th scope="col">Report</th>
                                         <th scope="col">Insurance</th>
                                         <th scope="col">UserId</th>
+                                        <th scope="col">Download</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,17 +32,20 @@
                                         <td>{{ i.gender }}</td>
                                         <td>{{ i.dob }}</td>
                                         <td>{{ i.relation }}</td>
-                                        <td><i class="bi bi-download" style='color: #009CFF'></i></td>
-                                        <td>{{ i.updated_at }}</td>
+                                        <td><a href="curepe.in/link">curepe.in/link</a></td>
+                                        <td><a href="curepe.in/link">curepe.in/link</a></td>
                                         <td>status</td>
                                         <td>{{ i.userId }}</td>
+                                        <td><i class="bi bi-download" style='color: #009CFF'></i></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-                <td><router-link class="btn btn-sm btn-primary" to="/home">Back to Home</router-link></td>
+                <td>
+                    <router-link class="btn btn-sm btn-primary" to="/home">Back to Home</router-link>
+                </td>
             </div>
         </div>
     </div>

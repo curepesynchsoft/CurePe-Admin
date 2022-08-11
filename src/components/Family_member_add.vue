@@ -9,7 +9,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
+                                        <th scope="col">S.no</th>
                                         <th scope="col">Full Name</th>
                                         <th scope="col">Phone</th>
                                         <th scope="col">Gender</th>
@@ -78,7 +78,36 @@ export default {
                 console.log(error)
             })
         }
-}
+    },
+
+    data_relatives() {
+        return {
+            // isExits: false,
+            user_relative: [],
+        }
+    },
+    // mountedd() {
+    //     this.isOTPVarified()
+    // },
+    method: {
+        async isOTPVarified() {
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/added_member_list', {
+                headers: {
+                    'Authorization': token,
+                }
+            }
+            ).then(res => {
+                // localStorage.setItem('access_token',token)
+                if (res) {
+                    this.user = res.data.data.user_relative
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+        }
+    }
 }
 
 
