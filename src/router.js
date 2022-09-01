@@ -4,9 +4,10 @@ import Loginpage from '../src/components/signin';
 import HomePage from '../src/components/userview.vue';
 import TablePage from '../src/components/user_table.vue';
 import MemberTable from '../src/components/added_member.vue';
-import Addedmember from '../src/components/Family_member_add.vue'
-import AdminProfile from '../src/components/profile.vue'
-import SubAdmin from '../src/components/sub_admin.vue'
+import familyMember from '../src/components/family_members.vue';
+import AdminProfile from '../src/components/profile.vue';
+import SubAdmin from '../src/components/sub_admin.vue';
+import Policies from '../src/components/policies.vue'
 
 
 
@@ -16,7 +17,7 @@ const routes = [
 		component: Loginpage,
 		// redirect: '/home',
 	},
-	
+
 	{
 		path: '/home',
 		component: HomePage,
@@ -29,12 +30,12 @@ const routes = [
 		name: 'UserTable',
 	},
 	{
-		path: '/memberlist',
-		component: Addedmember,
-		name: 'AddedMemberTable',
+		path: '/familymember',
+		component: familyMember,
+		name: 'familyMember',
 	},
 	{
-		path: '/membertable',
+		path: '/membertable/:id',
 		component: MemberTable,
 		name: 'MemberTable',
 	},
@@ -47,6 +48,11 @@ const routes = [
 		path: '/profile',
 		component: AdminProfile,
 		name: 'AdminProfile',
+	},
+	{
+		path: '/policies',
+		component: Policies,
+		name: 'PolicyData',
 	},
 ];
 
