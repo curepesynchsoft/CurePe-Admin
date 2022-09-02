@@ -34,7 +34,7 @@
                     <th scope="col">Report</th>
                     <th scope="col">Insurance</th>
                     <th scope="col">UserId</th>
-                    <th scope="col">Download</th>
+                    <!-- <th scope="col">Download</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -49,10 +49,9 @@
                     <td><a href="curepe.in/link">{{ i.insurance }}</a></td>
                     <td><a href="curepe.in/link">{{ i.report }}</a></td>
                     <td>{{ i.userId }}</td>
-                    <td>
+                    <!-- <td>
                       <i class="bi bi-download btn" style="color: #009cff" onclick="ExportToExcel2('xlsx')"></i>
-                      <!-- <button onclick="ExportToExcel('xlsx')">Export table to excel</button> -->
-                    </td>
+                    </td> -->
                   </tr>
                 </tbody>
               </table>

@@ -32,7 +32,7 @@
                     <th scope="col">Report</th>
                     <th scope="col">Insurance</th>
                     <th scope="col">Added Family</th>
-                    <th scope="col">Download Details</th>
+                    <!-- <th scope="col">Download Details</th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -49,10 +49,9 @@
                     <td>
                       <router-link :to="`/membertable/${i.id}`">Added member list</router-link>
                     </td>
-                    <td>
+                    <!-- <td>
                       <i class="bi bi-download btn" style="color: #009cff" onclick="ExportToExcel('xlsx')"></i>
-                      <!-- <button onclick="ExportToExcel('xlsx')">Export table to excel</button> -->
-                    </td>
+                    </td> -->
                   </tr>
                 </tbody>
               </table>
