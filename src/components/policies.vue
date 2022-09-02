@@ -26,7 +26,7 @@
                             <!-- The Modal -->
                             <div class="modal" id="myModal">
 
-                                <form id="form">
+                                <form id="formfill">
                                     <h3>Add Policy</h3>
                                     <!-- Details -->
                                     <div class="form-control">
@@ -89,10 +89,10 @@ export default {
 };
 </script>
 
-<!-- <style>
+<style>
  
     /* Styling the Form (Color, Padding, Shadow) */
-    form {
+    #formfill {
         background-color: #fff;
         max-width: 500px;
         margin: 50px auto;
@@ -145,4 +145,4 @@ export default {
         margin-bottom: 20px;
     }
     
-</style> -->
+</style>
