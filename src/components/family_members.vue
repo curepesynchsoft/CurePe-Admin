@@ -17,11 +17,11 @@
                 <div class="col-10"></div>
 
                 <div class="col-2 btn">
-                  <p type="button" class="btn btn-outline-primary" onclick="ExportToExcel('xlsx')"><i
+                  <p type="button" class="btn btn-outline-primary" onclick="ExportToExcel2('xlsx')"><i
                       class="bi bi-download"></i> Download All</p>
                 </div>
               </div>
-              <table class="table" id="tableaddeduser">
+              <table class="table" id="tablefamilymember">
                 <thead>
                   <tr>
                     <th scope="col">ID</th>

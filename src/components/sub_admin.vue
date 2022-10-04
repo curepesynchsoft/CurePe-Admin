@@ -57,16 +57,16 @@
     methods: {
       async addSubadmindata() {
         console.log(this.name, this.psw, this.otp);
-        let result = await axios.post("https://api-cure-pe.synchsoft.in/api/v1/add_subadmin",
+        let result = await axios.post(
+          "https://api-cure-pe.synchsoft.in/api/v1/add_subadmin",
           {
             full_name: this.name,
             phone: this.psw,
             otp: this.otp,
           }
         );
-        console.warn("result", result);
+        console.warn("result", result); 
         alert("Added");
-
       },
     },
   };

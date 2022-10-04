@@ -9,16 +9,18 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "bootstrap": "^5.2.0",
+    "bootstrap": "^5.0.0",
     "core-js": "^3.8.3",
     "datatables.net-dt": "^1.12.1",
     "emailjs-com": "^3.2.0",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.2",
     "mst-auto-page": "^1.0.9",
     "vue": "^3.2.13",
     "vue-awesome-paginate": "^1.0.23",
     "vue-extend-layout": "^2.0.6",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vue-switches": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

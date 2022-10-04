@@ -212,15 +212,34 @@ function ExportToExcel (type, fn, dl) {
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl
         ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
-        : XLSX.writeFile(wb, fn || "MySheetName." + (type || "xlsx"));
+        : XLSX.writeFile(wb, fn || "userstable." + (type || "xlsx"));
 }
 function ExportToExcel2 (type, fn, dl) {
-    var elt = document.getElementById("tableaddeduser");
+    var elt = document.getElementById("tablefamilymember");
+    var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+    return dl
+        ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
+        : XLSX.writeFile(wb, fn || "familymembers." + (type || "xlsx"));
+}
+function ExportToExcel3 (type, fn, dl) {
+    var elt = document.getElementById("policy");
     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
     return dl
         ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
         : XLSX.writeFile(wb, fn || "MySheetName." + (type || "xlsx"));
 }
+function ExportToExcel5(type, fn, dl) {
+    var elt = document.getElementById("addedmembers");
+    var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+    return dl
+        ? XLSX.write(wb, { bookType: type, bookSST: true, type: "base64" })
+        : XLSX.writeFile(wb, fn || "addedmember." + (type || "xlsx"));
+}
+
+
+
+
+
 
 
 

@@ -54,10 +54,14 @@ const routes = [
 		component: Policies,
 		name: 'PolicyData',
 	},
+	{
+		path: '/:id',
+		name: 'public-profile',
+	}
 ];
 
 const router = createRouter({
-	// mode: "history",
+	mode: "history",
 	history: createWebHistory(false),
 	routes: routes,
 });
