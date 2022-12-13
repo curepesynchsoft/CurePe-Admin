@@ -11,6 +11,8 @@ import Policies from '../src/components/policies.vue'
 
 
 
+
+
 const routes = [
 	{
 		path: '/',
