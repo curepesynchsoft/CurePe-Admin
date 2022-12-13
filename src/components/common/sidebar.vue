@@ -24,10 +24,10 @@
                 <!-- <router-link to="membertable" class="nav-item nav-link" :class="$route.path === '/membertable' ? 'active' : ''"><i class="fa fa-th me-2"></i>Added Members</router-link> -->
                 <router-link to="/familyMember" class="nav-item nav-link" :class="$route.path === '/familyMember' ? 'active' : ''"><i class="fa fa-th me-2"></i>Family Members</router-link>
                 <router-link to="/sub_admin" class="nav-item nav-link" :class="$route.path === '/sub_admin' ? 'active' : '' "><i class="fa fa-keyboard me-2"></i>SubAdmin</router-link>
-                <!-- <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-table me-2"></i>Health Checkup</router-link>
-                <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-chart-bar me-2"></i>Loan Request</router-link> -->
+                <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-table me-2"></i>Health Checkup</router-link>
+                <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-chart-bar me-2"></i>Loan Request</router-link>
                 <router-link to="/policies" class="nav-item nav-link" :class="$route.path === '/policies' ? 'active' : '' "><i class="far fa-file-alt me-2"></i>Policies</router-link>
-                <!-- <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-chart-bar me-2"></i>Activities</router-link> -->
+                <router-link to="/home" class="nav-item nav-link" :class="$route.path === '/' ? 'active' : '' "><i class="fa fa-chart-bar me-2"></i>Activities</router-link>
             </div>
         </nav>
     </div>
