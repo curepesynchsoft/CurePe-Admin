@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router';
+import { createMemoryHistory, createRouter } from 'vue-router';
 // import Sidebar from '../src/components/common/sidebar.vue'
 import Loginpage from '../src/components/signin';
 import HomePage from '../src/components/userview.vue';
@@ -63,7 +63,7 @@ const routes = [
 ];
 
 const router = createRouter({
-	history: createWebHistory(),
+history: createMemoryHistory(),
 	routes: routes,
 });
 
