@@ -64,7 +64,7 @@ const routes = [
 
 const router = createRouter({
 	mode: "history",
-	history: createWebHistory(false),
+	history: createWebHistory(),
 	routes: routes,
 });
 

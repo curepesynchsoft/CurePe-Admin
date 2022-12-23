@@ -302,7 +302,7 @@ export default {
                     headers: {
                         'Authorization': token,
                     }
-                }                
+                }
             ).then(res => {
                 // localStorage.setItem('access_token', token)
                 if(res){
@@ -320,7 +320,7 @@ export default {
                     headers: {
                         'Authorization': token,
                     }
-                } 
+                }
             ).then(res => {
                 // localStorage.setItem('access_token', token)
                 if(res){
