@@ -138,7 +138,7 @@
                                 <td>Jhon Doe</td>
                                 <td>$123</td>
                                 <td>Paid</td>
-                                <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                <td><a class="btn btn-sm btn-primary" >Detail</a></td>
                             </tr>
                         </tbody>
                     </table>
