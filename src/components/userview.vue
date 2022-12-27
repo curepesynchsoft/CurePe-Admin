@@ -29,8 +29,8 @@
                     <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                         <i class="fa fa-chart-area fa-3x text-primary"></i>
                         <div class="ms-3">
-                            <p class="mb-2">Today Checkup</p>
-                            <h6 class="mb-0">$1234</h6>
+                            <p class="mb-2">Total Policies</p>
+                            <h6 class="mb-0">{{ Object.keys(policies).length }}</h6>
                         </div>
                     </div>
                 </div>
@@ -38,8 +38,8 @@
                     <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                         <i class="fa fa-chart-pie fa-3x text-primary"></i>
                         <div class="ms-3">
-                            <p class="mb-2">Total Request</p>
-                            <h6 class="mb-0">$1234</h6>
+                            <p class="mb-2">Total Sub Admin</p>
+                            <h6 class="mb-0">{{ Object.keys(allsubadmin).length }}</h6>
                         </div>
                     </div>
                 </div>
@@ -76,73 +76,30 @@
 
         <!-- Recent checkups Start -->
         <div class="container-fluid pt-4 px-4">
-            <div class="bg-light text-center rounded p-4">
+            <div class="bg-light rounded p-4">
                 <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h6 class="mb-0">Recent Checkups</h6>
+                    <h6 class="mb-0">All Admins</h6>
                     <!-- <a href="">Show All</a> -->
                 </div>
-                <div class="table-responsive">
-                    <table class="table text-start align-middle table-bordered table-hover mb-0">
-                        <thead>
-                            <tr class="text-dark">
-                                <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Invoice</th>
-                                <th scope="col">Customer</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
-                                <td>01 Jan 2045</td>
-                                <td>INV-0123</td>
-                                <td>Jhon Doe</td>
-                                <td>$123</td>
-                                <td>Paid</td>
-                                <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
-                                <td>01 Jan 2045</td>
-                                <td>INV-0123</td>
-                                <td>Jhon Doe</td>
-                                <td>$123</td>
-                                <td>Paid</td>
-                                <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
-                                <td>01 Jan 2045</td>
-                                <td>INV-0123</td>
-                                <td>Jhon Doe</td>
-                                <td>$123</td>
-                                <td>Paid</td>
-                                <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
-                                <td>01 Jan 2045</td>
-                                <td>INV-0123</td>
-                                <td>Jhon Doe</td>
-                                <td>$123</td>
-                                <td>Paid</td>
-                                <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
-                                <td>01 Jan 2045</td>
-                                <td>INV-0123</td>
-                                <td>Jhon Doe</td>
-                                <td>$123</td>
-                                <td>Paid</td>
-                                <td><a class="btn btn-sm btn-primary" >Detail</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <table class="table" id="datatable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Phone Number</th>
+         
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="allsubadmin in allsubadmin" :key="allsubadmin.id">
+          <td>{{ allsubadmin.id }}</td>
+          <td>{{ allsubadmin.full_name }}</td>
+          <td>{{ allsubadmin.phone }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
             </div>
         </div>
         <!-- Recent Sales End -->
@@ -274,7 +231,12 @@
 </template>
 
 <script>
-import "../../public/assets/css/style.css"
+import "../../public/assets/css/style.css";
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "datatables.net-dt/js/dataTables.dataTables";
+import "datatables.net-dt/css/jquery.dataTables.min.css";
+import $ from "jquery";
 import axios from 'axios';
 export default {
     name: "HomePage",
@@ -283,7 +245,10 @@ export default {
         return {
             isExits: false,
             user: [],
-            user_relative: []
+            user_relative: [],
+            policies: [],
+            allsubadmin: []
+
         }
         // {
         //     variable: false
@@ -292,6 +257,9 @@ export default {
     mounted() {
         this.isOTPVarified()
         this.isOTPVarify()
+        this.getPolicies() 
+        this.getsubadmin()
+       
     },
     methods:{
     async isOTPVarified()
@@ -325,12 +293,59 @@ export default {
                 // localStorage.setItem('access_token', token)
                 if(res){
                     this.user_relative = res.data.data
-                    // console.log(res.data.data)
+                  //  console.log(res.data.data)
                 }
             }).catch(error => {
                 console.log(error)
             })
-        }
+        },
+        async getPolicies(){
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/allpolicies', {
+                    headers: {
+                        'Authorization': token,
+                    }
+                }
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                   this.policies = res.data.data
+                    /// console.log(res.data.data)
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+            
+
+        },
+        async getsubadmin(){
+            let token = localStorage.getItem('access_token')
+            await axios.get(
+                'https://api-cure-pe.synchsoft.in/api/v1/allsubadmin', {
+                    headers: {
+                        'Authorization': token,
+                    }
+                }
+            ).then(res => {
+                // localStorage.setItem('access_token', token)
+                if(res){
+                   this.allsubadmin = res.data.data;
+                  
+                   setTimeout(() => {
+                    $("#datatable").DataTable();  
+                 }, 250) 
+                   console.log(res.data.data)
+                }
+            }).catch(error => {
+                console.log(error)
+            })
+            
+
+        },
+   
+
+
     }
 }
 </script>

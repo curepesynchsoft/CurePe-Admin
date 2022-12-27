@@ -252,6 +252,8 @@
 </template>
 
 <script>
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
   import $ from "jquery";
   import { ref, reactive, onMounted } from "vue";
   import axios from "axios";

@@ -37,7 +37,8 @@
 </template>
 
 <script>
-
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 export default {
     name: "LoginPage",
