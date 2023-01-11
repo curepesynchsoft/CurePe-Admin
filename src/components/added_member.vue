@@ -89,6 +89,8 @@
 </template>
 
 <script>
+import "jquery/dist/jquery.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
   import Axios from "axios";
   export default {
     name: "memberTable",

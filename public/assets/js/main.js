@@ -1,14 +1,19 @@
 $(function () {
     "use strict";
 
+
+
+    
+
+
     // Spinner
-    var spinner = function () {
+    function spinner() {
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
         }, 1);
-    };
+    }
     spinner();
     
     
@@ -26,10 +31,10 @@ $(function () {
     });
 
     // Sidebar Toggler
-    window.$('.sidebar-toggler').click(function () {
-        $('.sidebar, .content').toggleClass("open");
-        return false;
-    });
+window.$('.sidebar-toggler').click(function () {
+    $('.sidebar, .content').toggleClass("open");
+    return false;
+});
 
 
     // Progress Bar

@@ -4,7 +4,7 @@
     
     <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-light navbar-light">
-            <router-link to="/" class="navbar-brand mx-4 mb-3">
+            <router-link to="/home" class="navbar-brand mx-4 mb-3">
                 <h3 class="text-primary"><img src="../../../public/assets/img/curepelogo_green.png" style="width: 80px;" alt=""></h3>
             </router-link>
             <div class="d-flex align-items-center ms-4 mb-4">
