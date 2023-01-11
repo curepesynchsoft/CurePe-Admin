@@ -274,7 +274,7 @@
           "https://api-cure-pe.synchsoft.in/api/v1/policies_all"
         );
         policies.value = res.data.data;
-        console.log(res.data.data);
+        // console.log(res.data.data);
       };
       const storePolicy = async () => {
         // console.log(form);
@@ -283,7 +283,7 @@
           form
         );
         getPolicy();
-        formReset();
+        // formReset();
         $("#myModal").hide();
         formReset();
         location.reload();
@@ -308,7 +308,7 @@
         formReset();
         $("#myModal").hide();
         formReset();
-        location.reload();
+        // location.reload();
       };
       const deletePolicy = async (id) => {
         if (confirm("Do you want to delete"))
